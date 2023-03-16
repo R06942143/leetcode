@@ -15,3 +15,9 @@ class Solution:
                     max_number = value
             answer += max_number
         return answer
+    
+    def deleteGreatestValue(self, grid: List[List[int]]) -> int:
+        ## sort each row
+        for m in range(len(grid)):
+            grid[m].sort()
+        return sum(max(col) for col in zip(*grid)) ## zip(* 2-d array) will change column and row
