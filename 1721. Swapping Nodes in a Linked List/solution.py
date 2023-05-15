@@ -22,7 +22,7 @@ class Solution:
 
         if left == right:
             return head
-        
+
         pre_left.next, pre_right.next = right, left
         left.next, right.next = right.next, left.next
         return dummy.next
