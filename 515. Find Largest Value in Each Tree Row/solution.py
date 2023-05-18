@@ -4,6 +4,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def largestValues(self, root: TreeNode|None) -> list[int]:
         if not root:
