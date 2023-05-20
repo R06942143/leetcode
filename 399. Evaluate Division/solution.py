@@ -1,5 +1,8 @@
+from collections import defaultdict
+
+
 class Solution:
-    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+    def calcEquation(self, equations: list[list[str]], values: list[float], queries: list[list[str]]) -> list[float]:
         self.graph = defaultdict(dict)
         for i in range(len(equations)):
             self.graph[equations[i][0]][equations[i][1]] = values[i]
