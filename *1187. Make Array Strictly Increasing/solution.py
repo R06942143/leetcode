@@ -26,4 +26,6 @@ class Solution:
                         min(new_d[t + 1], arr2[idx]) if t + 1 in new_d else arr2[idx]
                     )
             d = new_d
+            if not d:
+                return -1
         return min(d.keys()) if d else -1
