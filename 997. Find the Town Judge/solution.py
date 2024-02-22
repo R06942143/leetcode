@@ -25,15 +25,11 @@ class Solution:
         return -1
 
     def better_answer(self, n: int, trust: list[list[int]]) -> int:
-        indegree_map = [0] * (n+1)
-        outdegree_map = [0] * (n+1)
-
-        for relationship in trust:
-            indegree_map[relationship[1]] += 1
-            outdegree_map[relationship[0]] += 1
-        
-        for i in range(1, n+1):
-            if indegree_map[i] == n-1 and outdegree_map[i] == 0:
+        count = [0] * (n + 1)
+        for i, j in trust:
+            count[i] -= 1
+            count[j] += 1
+        for i in range(1, n + 1):
+            if count[i] == n - 1:
                 return i
-        
         return -1
