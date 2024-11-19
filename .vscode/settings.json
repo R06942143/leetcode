@@ -3,5 +3,8 @@
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "python.formatting.provider": "none",
-  "cSpell.words": ["nums"]
+  "cSpell.words": [
+    "nums",
+    "popleft"
+  ]
 }
